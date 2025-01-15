@@ -9,29 +9,22 @@
     
     <?php
     define('GAJI',5000000 ); 
-    define('BONUS',50000);
-    define('PAJAK',0.12)
+    define('BONUS',500000);
+    define('PAJAK',0.12);
     
-    $jumlah_proyek = 3;
-    
-    $totalBonus = $BONUS * $jumlahProyekSelesai;
-    
-    // Menghitung total pendapatan (gaji pokok + bonus)
-    $totalPendapatan = $gajiPokok + $totalBonus;
-    
-    // Menghitung pajak penghasilan (5% dari total pendapatan)
-    $pajak = $totalPendapatan * PAJAK_PENGHASILAN;
-    
-    // Menghitung gaji bersih setelah dikurangi pajak
-    $gajiBersih = $totalPendapatan - $pajak;
-    
-    // Menampilkan hasil perhitungan
-    echo "Gaji Pokok: Rp" . number_format($gajiPokok, 0, ',', '.') . "<br>";
-    echo "Jumlah Proyek Selesai: " . $jumlahProyekSelesai . " proyek<br>";
-    echo "Total Bonus: Rp" . number_format($totalBonus, 0, ',', '.') . "<br>";
-    echo "Total Pendapatan: Rp" . number_format($totalPendapatan, 0, ',', '.') . "<br>";
-    echo "Pajak Penghasilan (5%): Rp" . number_format($pajak, 0, ',', '.') . "<br>";
-    echo "Gaji Bersih: Rp" . number_format($gajiBersih, 0, ',', '.') . "<br>";
+    $jumlah_proyek = 1;
+    $total_gaji;
+    $gaji_bersih;
+
+    $jumlah_proyek *= BONUS;
+    $total_gaji = GAJI + $jumlah_proyek;
+    $total_pajak = $total_gaji * PAJAK;
+    $gaji_bersih = $total_gaji - $total_pajak;
+
+    echo "bonus anda $jumlah_proyek <br/>";
+    echo "total gaji anda ditambah dengan bonus $total_gaji <br/>";
+    echo "pajak anda $total_pajak <br/>";
+    echo "total gaji bersih anda $gaji_bersih";
     ?>
     
 
