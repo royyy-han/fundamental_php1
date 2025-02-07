@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+</head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-
 scale=1.0">
 <title>Form Biodata</title>
 <body>
-<form action="form4.html" method="POST">
+<form action="proses.php" method="POST">
 <fieldset>
 <legend><h1>FORM BIODATA </h1> </legend>
 <p>
 <label>NISN :</label>
-<input type="number" name="NISN" placeholder="MASUKKAN NISN ANDA">
+<input type="number" name="nisn" placeholder="MASUKKAN NISN ANDA">
 </p>
 <p>
 <label>NAMA LENGKAP :</label>
-<input type="text" name="USERNAME" placeholder="MASUKKAN NAMA ANDA">
+<input type="text" name="username" placeholder="MASUKKAN NAMA ANDA">
 </p>
 <p>
 <label>TEMPAT LAHIR :</label>
-<input type="text" name="TEMPAT LAHIR" placeholder="MASUKKAN TEMPAT LAHIR ANDA">
+<input type="text" name="tempat_lahir" placeholder="MASUKKAN TEMPAT LAHIR ANDA">
 </p>
 <p>
 <label>TANGGAL LAHIR :</label>
-<input type="date" name="TANGGAL LAHIR">
+<input type="date" name="tanggal_lahir">
 </p>
 <p>
 <label>GENDER :</label>
-<input type="radio" name="jENIS KELAMIN" value="lAKI-LAKI">LAKI- LAKI
-<input type="radio" name="jENIS KELAMIN" value="PEREMPUAN">PEREMPUAN
+<input type="radio" name="jenis_kelamin" value="lAKI-LAKI">LAKI- LAKI
+<input type="radio" name="jenis_kelamin" value="PEREMPUAN">PEREMPUAN
 </p>
 <p>
 <label>AGAMA :</label>
@@ -45,15 +47,15 @@ scale=1.0">
 <p>
 <label>ALAMAT :</label>
 <br />
-<textarea name="ALAMAT" id="ALAMAT" cols="30" rows="10"></textarea>
+<textarea name="alamat" id="ALAMAT" cols="30" rows="10"></textarea>
 </p>
 <p>
 <label>ASAL SEKOLAH :</label>
-<input type="ASAL SEKOLAH" name="ASAL SEKOLAH" placeholder="MASUKKAN NAMA SEKOLAH ANDA">
+<input type="ASAL SEKOLAH" name="asal_sekolah" placeholder="MASUKKAN NAMA SEKOLAH ANDA">
 </p>
 <p>
-<label>PILIHAN OPSI 1 :</label>
-<select name="PILIHAN JURUSAN 1" id="PILIHAN JURUSAN 1">
+<label>PILIHAN JURUSAN 1 :</label>
+<select name="pilihan_jurusan1" id="PILIHAN JURUSAN 1">
     <option value="TIDAK MEMILIH JURUSAN"> PILIH JURUSAN ANDA</option>
     <option value="PPLG"> PENGEMBANGAN PERANGKAT LUNAK & GIM</option>
     <option value="TJKT"> TEKHNIK JARINGAN KOMPUTER & TELEKOMUNIKASI</option>
@@ -68,8 +70,8 @@ scale=1.0">
 </select>
 </P>
 <P>
-<label>PILIHAN OPSI 2 :</label>
-<select name="PILIHAN JURUSAN 2" id="PILIHAN JURUSAN 2">
+<label>PILIHAN JURUSAN 2 :</label>
+<select name="pilihan_jurusan2" id="PILIHAN JURUSAN 2">
     <option value="TIDAK MEMILIH JURUSAN"> PILIH JURUSAN ANDA</option>
     <option value="PPLG"> PENGEMBANGAN PERANGKAT LUNAK & GIM</option>
     <option value="TJKT"> TEKHNIK JARINGAN KOMPUTER & TELEKOMUNIKASI</option>
@@ -84,18 +86,20 @@ scale=1.0">
 </select>
 </p>
 <p>
-    EXTRA YANG DIMINATI: <label for="EXTRA"></label>
-    <input type="checkbox" name="ENCASA"> ENGLISH CLUB ESEMKASA
-    <input type="checkbox" name="BASKET"> BASKET
-    <input type="checkbox" name="VOLI"> VOLI
-    <input type="checkbox" name="DA"> DEWAN AMBALAN
-    <input type="checkbox" name="PA"> PECINTA ALAM
-    <input type="checkbox" name="FUTSAL"> FUTSAL
-    <input type="checkbox" name="PASKIB"> PASKIB
-    <input type="checkbox" name="LH"> LASKAR HIJAU
+    EXTRA YANG DIMINATI: <label for="EXTRA"  name="extrakulikuler"></label> <br />
+    <input type="checkbox" value="EC" name="ekskul[]"> ENGLISH CLUB ESEMKASA <br />
+    <input type="checkbox" value="BASKET" name="ekskul[]"> BASKET <br />
+    <input type="checkbox" value="VOLI" name="ekskul[]"> VOLI <br />
+    <input type="checkbox" value="DA" name="ekskul[]"> DEWAN AMBALAN <br />
+    <input type="checkbox" value="PA" name="ekskul[]"> PECINTA ALAM <br />
+    <input type="checkbox" value="FS" name="ekskul[]"> FUTSAL <br />
+    <input type="checkbox" value="PB" name="ekskul[]"> PASKIB <br />
+    <input type="checkbox" value="LH" name="ekskul[]"> LASKAR HIJAU <br />
+    <input type="checkbox" value="GDS" name="ekskul[]"> GERAKAN DISIPLIN SEKOLAH <br />
+    <input type="checkbox" value="OSIS" name="ekskul[]"> ORGANISASI SISWA INTRA SEKOLAH <br />
 </p>
 <p>
-<input type="submit" name="INPUT DATA" value="INPUT DATA">
+<input type="submit" name="input_data" value="INPUT DATA">
 </p>
 </fieldset>
 </form>
